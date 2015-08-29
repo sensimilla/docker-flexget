@@ -1,4 +1,4 @@
-FROM alpine-python2
+FROM frolvlad/alpine-python2
 
 RUN pip install -I flexget transmissionrpc
 
