@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM alpine-python2
 
 RUN pip install -I flexget transmissionrpc
 
