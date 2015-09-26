@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/dahlb/alpine-flexget:latest.svg)](https://imagelayers.io/?images=dahlb/alpine-flexget:latest 'Get your own badge on imagelayers.io')
+
 Flexget in a slim linux container
 ==============
 
