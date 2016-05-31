@@ -1,5 +1,6 @@
 FROM frolvlad/alpine-python2
 
+RUN pip install -I pyopenssl
 RUN pip install -I flexget transmissionrpc
 
 RUN mkdir -p /root/.flexget && touch /root/.flexget/config.yml
