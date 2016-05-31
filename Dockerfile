@@ -1,7 +1,6 @@
 FROM frolvlad/alpine-python2
 
-RUN pip install -I pyopenssl
-RUN pip install -I flexget transmissionrpc
+RUN pip install -I flexget
 
 RUN mkdir -p /root/.flexget && touch /root/.flexget/config.yml
 RUN sed -i "/API_KEY =/c\import os; API_KEY = os.getenv('ROTTEN_TOMATOES_API_KEY', 'rh8chjzp8vu6gnpwj88736uv')" /usr/lib/python2.7/site-packages/flexget/plugins/api_rottentomatoes.py 
