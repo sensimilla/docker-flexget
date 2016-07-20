@@ -5,4 +5,4 @@ RUN apk --no-cache add ca-certificates \
   && mkdir -p /root/.flexget \
   && touch /root/.flexget/config.yml 
 
-CMD ["/usr/bin/flexget", "--loglevel", "debug", "daemon", "start"]
+CMD ["/usr/bin/flexget", "--loglevel", "info", "daemon", "start"]
