@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-python2
+FROM pandada8/alpine-python:3
 
 RUN apk --no-cache add ca-certificates \
   && pip install -I flexget transmissionrpc \
