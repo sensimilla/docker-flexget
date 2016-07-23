@@ -5,8 +5,8 @@ RUN apk --no-cache add ca-certificates \
   && mkdir -p /root/.flexget \
   && touch /root/.flexget/config.yml 
   
-COPY bootstrap.sh bootstrap.sh
+COPY bootstrap.sh /root/bootstrap.sh
 
-RUN chmod +x bootstrap.sh
+RUN chmod +x /root/bootstrap.sh
 
-CMD ["bootstrap.sh"]
+CMD ["/root/bootstrap.sh"]
