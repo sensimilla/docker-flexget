@@ -1,9 +1,11 @@
 FROM frolvlad/alpine-python3
 
-RUN apk --no-cache add ca-certificates \
+RUN apk --no-cache add tzdata ca-certificates \
   && pip install -I flexget transmissionrpc \
   && mkdir -p /root/.flexget \
-  && touch /root/.flexget/config.yml 
+  && touch /root/.flexget/config.yml \
+  && cp /usr/share/zoneinfo/America/New_York /etc/localtime \
+  && apk del tzdata
   
 COPY bootstrap.sh /root/bootstrap.sh
 
