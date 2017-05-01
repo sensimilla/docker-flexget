@@ -4,8 +4,8 @@ RUN apk --no-cache add tzdata ca-certificates \
   && pip install -I flexget transmissionrpc \
   && mkdir -p /root/.flexget \
   && touch /root/.flexget/config.yml \
-  && cp /usr/share/zoneinfo/America/New_York /etc/localtime \
-  && echo "America/New_York" > /etc/timezone \
+  && cp /usr/share/zoneinfo/Europe/London /etc/localtime \
+  && echo "Europe/London" > /etc/timezone \
   && apk del tzdata
   
 COPY bootstrap.sh /root/bootstrap.sh
